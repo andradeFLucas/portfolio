@@ -15,9 +15,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     
-    <!-- Lucide Icons -->
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -42,6 +42,24 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        .animated-button {
+            box-shadow: 0 0 0 0 rgba(45, 212, 191, 1);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(45, 212, 191, 0.7);
+            }
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 10px rgba(45, 212, 191, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(45, 212, 191, 0);
+            }
+        }
         @media (max-width: 768px) {
             .section-title {
                 font-size: 2rem;
@@ -51,7 +69,7 @@
 </head>
 <body class="antialiased">
 
-<!-- Header -->
+    <!-- Header -->
     <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
         <nav class="container mx-auto px-6 py-4 flex justify-end md:justify-center items-center">
             <div class="hidden md:flex items-center space-x-8">
@@ -59,10 +77,15 @@
                 <a href="#experiencia" class="text-slate-300 hover:text-teal-400 transition-colors">Experiência</a>
                 <a href="#habilidades" class="text-slate-300 hover:text-teal-400 transition-colors">Habilidades</a>
                 <a href="#conquistas" class="text-slate-300 hover:text-teal-400 transition-colors">Conquistas</a>
-                <a href="#contato" class="bg-teal-500 hover:bg-teal-400 text-black font-bold py-2 px-4 rounded-lg transition-transform hover:scale-105">Contato</a>
+                <div class="flex items-center gap-6">
+                    <a href="#contato" class="bg-teal-500 hover:bg-teal-400 text-black font-bold py-2 px-4 rounded-lg transition-transform hover:scale-105">Contato</a>
+                    <a href="https://www.linkedin.com/in/lucas-fraga-de-andrade-760613230/" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-teal-400 transition-colors text-2xl">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
             </div>
-            <button id="mobile-menu-button" class="md:hidden text-white">
-                <i data-lucide="menu"></i>
+            <button id="mobile-menu-button" class="md:hidden text-white text-2xl">
+                <i class="fa-solid fa-bars"></i>
             </button>
         </nav>
     </header>
@@ -70,8 +93,8 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-gray-900/95 z-50 md:hidden">
         <div class="flex justify-end p-6">
-             <button id="close-menu-button">
-                <i data-lucide="x" class="text-white h-8 w-8"></i>
+             <button id="close-menu-button" class="text-white text-3xl">
+                <i class="fa-solid fa-xmark"></i>
             </button>
         </div>
         <div class="flex flex-col items-center justify-center h-full space-y-8">
@@ -79,7 +102,8 @@
             <a href="#experiencia" class="mobile-menu-link text-2xl text-slate-300 hover:text-teal-400">Experiência</a>
             <a href="#habilidades" class="mobile-menu-link text-2xl text-slate-300 hover:text-teal-400">Habilidades</a>
             <a href="#conquistas" class="mobile-menu-link text-2xl text-slate-300 hover:text-teal-400">Conquistas</a>
-            <a href="#contato" class="mobile-menu-link bg-teal-500 hover:bg-teal-400 text-black font-bold py-3 px-6 rounded-lg text-xl">Contato</a>
+            <a href="#contato" class="mobile-menu-link text-2xl text-slate-300 hover:text-teal-400">Contato</a>
+            <a href="https://www.linkedin.com/in/lucas-fraga-de-andrade-760613230/" target="_blank" rel="noopener noreferrer" class="mobile-menu-link text-4xl text-slate-300 hover:text-teal-400"><i class="fa-brands fa-linkedin"></i></a>
         </div>
     </div>
 
@@ -97,13 +121,20 @@
                 </h1>
                 <p class="text-lg md:text-2xl text-teal-400 font-semibold mb-8">Conectando Inovação, Tecnologia e Resultados.</p>
                 <div class="flex justify-center space-x-4">
-                    <a href="https://w.app/mrbsak" class="bg-teal-500 text-black font-bold py-3 px-6 rounded-lg hover:bg-teal-400 transition-transform hover:scale-105">
+                    <a href="mailto:lucasf.andrade1@outlook.com" class="bg-teal-500 text-black font-bold py-3 px-6 rounded-lg animated-button">
                         Vamos Conversar
                     </a>
                     <a href="#experiencia" class="border-2 border-slate-500 text-slate-300 font-bold py-3 px-6 rounded-lg hover:bg-slate-800 hover:border-slate-400 transition-all">
                         Ver Projetos
                     </a>
                 </div>
+            </div>
+            
+            <!-- SETA PARA ROLAR PARA BAIXO -->
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
+                <a href="#sobre" aria-label="Rolar para baixo" class="text-white text-2xl">
+                    <i class="fa-solid fa-angles-down animate-bounce-slow"></i>
+                </a>
             </div>
         </section>
 
@@ -130,14 +161,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- SETA PARA ROLAR PARA BAIXO -->
-            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
-                <a href="#sobre" aria-label="Rolar para baixo" class="text-white text-2xl">
-                    <i class="fa-solid fa-angles-down animate-bounce-slow"></i>
-                </a>
-            </div>
-
         </section>
 
         <!-- Experience Section -->
@@ -147,14 +170,17 @@
                 <div class="relative max-w-3xl mx-auto">
                     <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-slate-700"></div>
                     
-                    <!-- Banestes -->
+                    <!-- Banestes - Emprego Atual Destacado -->
                     <div class="mb-8 flex justify-between items-center w-full right-timeline">
                         <div class="order-1 w-5/12"></div>
-                        <div class="z-20 flex items-center order-1 bg-teal-500 shadow-xl w-8 h-8 rounded-full">
-                            <i data-lucide="briefcase" class="mx-auto text-black w-4 h-4"></i>
+                        <div class="z-20 flex items-center justify-center order-1 bg-teal-500 shadow-xl w-10 h-10 rounded-full ring-4 ring-teal-500/50">
+                            <i class="fa-solid fa-star text-black"></i>
                         </div>
-                        <div class="order-1 glass-effect rounded-lg shadow-xl w-5/12 px-6 py-4">
-                            <p class="text-sm text-slate-400">03/2024 - Presente</p>
+                        <div class="order-1 glass-effect rounded-lg shadow-2xl w-5/12 px-6 py-4 border-2 border-teal-400 transform md:scale-105">
+                            <div class="flex justify-between items-center mb-1">
+                                <p class="text-sm text-slate-300">03/2024 - Presente</p>
+                                <span class="bg-teal-500 text-black text-xs font-bold px-2 py-1 rounded-full">Atual</span>
+                            </div>
                             <h3 class="font-bold text-lg text-white">Estagiário de Inovação</h3>
                             <p class="text-md font-semibold text-teal-400 mb-2">Banestes S.A</p>
                             <p class="text-sm text-slate-300 leading-snug">Gestão de projetos ágeis, automação com AppScript, desenvolvimento Low-Code com App Sheet e criação de dashboards no Looker Studio.</p>
@@ -164,8 +190,8 @@
                     <!-- MV Contabilidade -->
                     <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
                         <div class="order-1 w-5/12"></div>
-                        <div class="z-20 flex items-center order-1 bg-teal-500 shadow-xl w-8 h-8 rounded-full">
-                             <i data-lucide="bot" class="mx-auto text-black w-4 h-4"></i>
+                        <div class="z-20 flex items-center justify-center order-1 bg-slate-600 shadow-xl w-8 h-8 rounded-full">
+                             <i class="fa-solid fa-robot text-black text-sm"></i>
                         </div>
                         <div class="order-1 glass-effect rounded-lg shadow-xl w-5/12 px-6 py-4">
                             <p class="text-sm text-slate-400">11/2023 - 02/2024</p>
@@ -178,8 +204,8 @@
                     <!-- Sincades Tech -->
                     <div class="mb-8 flex justify-between items-center w-full right-timeline">
                         <div class="order-1 w-5/12"></div>
-                        <div class="z-20 flex items-center order-1 bg-teal-500 shadow-xl w-8 h-8 rounded-full">
-                             <i data-lucide="lightbulb" class="mx-auto text-black w-4 h-4"></i>
+                        <div class="z-20 flex items-center justify-center order-1 bg-slate-600 shadow-xl w-8 h-8 rounded-full">
+                             <i class="fa-solid fa-lightbulb text-black text-sm"></i>
                         </div>
                         <div class="order-1 glass-effect rounded-lg shadow-xl w-5/12 px-6 py-4">
                             <p class="text-sm text-slate-400">04/2023 - 08/2023</p>
@@ -192,8 +218,8 @@
                      <!-- FAESA -->
                     <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
                         <div class="order-1 w-5/12"></div>
-                        <div class="z-20 flex items-center order-1 bg-teal-500 shadow-xl w-8 h-8 rounded-full">
-                             <i data-lucide="school" class="mx-auto text-black w-4 h-4"></i>
+                        <div class="z-20 flex items-center justify-center order-1 bg-slate-600 shadow-xl w-8 h-8 rounded-full">
+                             <i class="fa-solid fa-school text-black text-sm"></i>
                         </div>
                         <div class="order-1 glass-effect rounded-lg shadow-xl w-5/12 px-6 py-4">
                             <p class="text-sm text-slate-400">06/2022 - 03/2023</p>
@@ -209,13 +235,13 @@
         <!-- Skills Section -->
         <section id="habilidades" class="py-20 md:py-32">
             <div class="container mx-auto px-6">
-                <h2 class="section-title text-center mb-16">Habilidades</h2>
+                <h2 class="section-title text-center mb-16">Caixa de Ferramentas</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     
                     <!-- Categoria 1: Automação & Low-Code -->
                     <div class="glass-effect p-6 rounded-lg flex flex-col">
                         <div class="flex items-center mb-4">
-                            <i data-lucide="bot" class="w-8 h-8 text-teal-400 mr-4"></i>
+                            <i class="fa-solid fa-robot w-8 h-8 text-teal-400 mr-4 text-2xl"></i>
                             <h3 class="text-xl font-bold text-white">Automação & Low-Code</h3>
                         </div>
                         <div class="flex flex-wrap gap-3 mt-auto">
@@ -228,7 +254,7 @@
                     <!-- Categoria 2: Análise de Dados & BI -->
                     <div class="glass-effect p-6 rounded-lg flex flex-col">
                         <div class="flex items-center mb-4">
-                            <i data-lucide="bar-chart-3" class="w-8 h-8 text-teal-400 mr-4"></i>
+                            <i class="fa-solid fa-chart-column w-8 h-8 text-teal-400 mr-4 text-2xl"></i>
                             <h3 class="text-xl font-bold text-white">Análise de Dados & BI</h3>
                         </div>
                         <div class="flex flex-wrap gap-3 mt-auto">
@@ -242,23 +268,33 @@
                     <!-- Categoria 3: Gestão de Projetos & Inovação -->
                     <div class="glass-effect p-6 rounded-lg flex flex-col">
                         <div class="flex items-center mb-4">
-                            <i data-lucide="lightbulb" class="w-8 h-8 text-teal-400 mr-4"></i>
+                            <i class="fa-solid fa-lightbulb w-8 h-8 text-teal-400 mr-4 text-2xl"></i>
                             <h3 class="text-xl font-bold text-white">Gestão & Inovação</h3>
                         </div>
-                        <div class="flex flex-wrap gap-3 mt-auto">
-                            <span class="skill-tag">Metodologias Ágeis</span>
-                            <span class="skill-tag">Jira</span>
-                            <span class="skill-tag">Design Thinking</span>
-                            <span class="skill-tag">Lean Startup</span>
-                            <span class="skill-tag">Análise de Requisitos</span>
-                            <span class="skill-tag">Mapeamento de Fluxos</span>
+                        <div class="space-y-4 mt-auto">
+                            <div>
+                                <h4 class="text-sm font-semibold text-slate-400 mb-2">Metodologias</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="skill-tag">Metodologias Ágeis</span>
+                                    <span class="skill-tag">Design Thinking</span>
+                                    <span class="skill-tag">Lean Startup</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-slate-400 mb-2">Processos & Ferramentas</h4>
+                                 <div class="flex flex-wrap gap-2">
+                                    <span class="skill-tag">Análise de Requisitos</span>
+                                    <span class="skill-tag">Mapeamento de Fluxos</span>
+                                    <span class="skill-tag">Jira</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Categoria 4: Desenvolvimento -->
                     <div class="glass-effect p-6 rounded-lg flex flex-col">
                         <div class="flex items-center mb-4">
-                            <i data-lucide="code-2" class="w-8 h-8 text-teal-400 mr-4"></i>
+                            <i class="fa-solid fa-code w-8 h-8 text-teal-400 mr-4 text-2xl"></i>
                             <h3 class="text-xl font-bold text-white">Desenvolvimento</h3>
                         </div>
                         <div class="flex flex-wrap gap-3 mt-auto">
@@ -271,7 +307,7 @@
                     <!-- Categoria 5: E-commerce & CMS -->
                     <div class="glass-effect p-6 rounded-lg flex flex-col">
                         <div class="flex items-center mb-4">
-                            <i data-lucide="shopping-cart" class="w-8 h-8 text-teal-400 mr-4"></i>
+                            <i class="fa-solid fa-cart-shopping w-8 h-8 text-teal-400 mr-4 text-2xl"></i>
                             <h3 class="text-xl font-bold text-white">E-commerce & CMS</h3>
                         </div>
                         <div class="flex flex-wrap gap-3 mt-auto">
@@ -285,7 +321,7 @@
                     <!-- Categoria 6: Idiomas -->
                     <div class="glass-effect p-6 rounded-lg flex flex-col">
                         <div class="flex items-center mb-4">
-                            <i data-lucide="languages" class="w-8 h-8 text-teal-400 mr-4"></i>
+                            <i class="fa-solid fa-language w-8 h-8 text-teal-400 mr-4 text-2xl"></i>
                             <h3 class="text-xl font-bold text-white">Idiomas</h3>
                         </div>
                         <div class="flex flex-wrap gap-3 mt-auto">
@@ -307,12 +343,12 @@
                     <h3 class="text-2xl md:text-3xl font-bold text-center text-white mb-8">Prêmios e Reconhecimentos</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                         <div class="glass-effect p-6 rounded-lg text-center">
-                            <i data-lucide="trophy" class="w-12 h-12 text-teal-400 mx-auto mb-4"></i>
+                            <i class="fa-solid fa-trophy text-4xl text-teal-400 mx-auto mb-4"></i>
                             <h4 class="text-xl font-bold text-white">1° Lugar - Desafios Fortes</h4>
                             <p class="text-teal-300">Hack27 Universitário - Base27</p>
                         </div>
                         <div class="glass-effect p-6 rounded-lg text-center">
-                            <i data-lucide="award" class="w-12 h-12 text-purple-400 mx-auto mb-4"></i>
+                            <i class="fa-solid fa-award text-4xl text-purple-400 mx-auto mb-4"></i>
                             <h4 class="text-xl font-bold text-white">Ideia Mais Inovadora</h4>
                             <p class="text-purple-300">Hack27 Universitário - Base27</p>
                         </div>
@@ -358,24 +394,24 @@
                 <h2 class="section-title mb-4">Vamos Inovar Juntos?</h2>
                 <p class="max-w-2xl mx-auto text-lg text-slate-300 mb-8">Estou sempre aberto a novas oportunidades, projetos e colaborações. Se você tem uma ideia ou um desafio, vamos conversar!</p>
                 
-                <a href="https://w.app/mrbsak" class="inline-block bg-teal-500 text-black text-xl font-bold py-4 px-8 rounded-lg hover:bg-teal-400 transition-transform hover:scale-105 mb-12">
+                <a href="https://w.app/mrbsak" class="inline-block bg-teal-500 text-black text-xl font-bold py-4 px-8 rounded-lg animated-button mb-12">
                     Fale comigo
                 </a>
 
-                <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-2">
-                    <div class="flex items-center space-x-2 text-slate-300">
-                        <i data-lucide="mail" class="w-5 h-5 text-teal-400"></i>
-                        <span>lucasf.andrade1@outlook.com</span>
-                    </div>
-                     <div class="flex items-center space-x-2 text-slate-300">
-                        <i data-lucide="phone" class="w-5 h-5 text-teal-400"></i>
-                        <span>(27) 99254-8928</span>
-                    </div>
+                <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-4">
+                    <a href="mailto:lucasf.andrade1@outlook.com" class="flex items-center space-x-2 text-slate-300 hover:text-teal-400 transition-colors">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>E-mail</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/lucas-fraga-de-andrade-760613230/" class="flex items-center space-x-2 text-slate-300 hover:text-teal-400 transition-colors" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
                 </div>
             </div>
         </section>
     </main>
-    
+
     <style>
         .animate-blob {
             animation: blob 7s infinite;
@@ -396,9 +432,8 @@
         .skill-tag {
             @apply bg-gray-800/50 border border-gray-700 text-slate-200 text-sm font-medium px-3 py-1.5 rounded-lg;
         }
-
         .animate-bounce-slow {
-        animation: bounce 2.5s infinite;
+            animation: bounce 2.5s infinite;
         }
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% {
@@ -414,12 +449,6 @@
     </style>
 
     <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
-
-        // Set current year in footer
-        document.getElementById('year').textContent = new Date().getFullYear();
-        
         // Header scroll effect
         const header = document.getElementById('header');
         window.addEventListener('scroll', () => {
