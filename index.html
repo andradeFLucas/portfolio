@@ -16,9 +16,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide-react@latest/dist/umd/lucide-react.js"></script>
-    <script src="https://unpkg.com/lucide-icons@latest"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -131,6 +130,14 @@
                     </div>
                 </div>
             </div>
+
+            <!-- SETA PARA ROLAR PARA BAIXO -->
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
+                <a href="#sobre" aria-label="Rolar para baixo" class="text-white text-2xl">
+                    <i class="fa-solid fa-angles-down animate-bounce-slow"></i>
+                </a>
+            </div>
+
         </section>
 
         <!-- Experience Section -->
@@ -368,7 +375,7 @@
             </div>
         </section>
     </main>
-
+    
     <style>
         .animate-blob {
             animation: blob 7s infinite;
@@ -388,6 +395,21 @@
         }
         .skill-tag {
             @apply bg-gray-800/50 border border-gray-700 text-slate-200 text-sm font-medium px-3 py-1.5 rounded-lg;
+        }
+
+        .animate-bounce-slow {
+        animation: bounce 2.5s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-15px);
+            }
+            60% {
+                transform: translateY(-7px);
+            }
         }
     </style>
 
