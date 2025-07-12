@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Fraga de Andrade | Portfólio de Inovação e Tecnologia</title>
+    <meta name="description" content="Portfólio de Lucas Fraga de Andrade, focado em inovação, gestão de projetos, automação e desenvolvimento de soluções tecnológicas.">
+    <meta name="keywords" content="Lucas Fraga, Inovação, Tecnologia, Gestão de Projetos, Automação, AppSheet, Power BI, Ciência da Computação">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide-react@latest/dist/umd/lucide-react.js"></script>
+    <script src="https://unpkg.com/lucide-icons@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e2e8f0;
+        }
+        .glass-effect {
+            background: rgba(17, 24, 39, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glow-effect {
+            box-shadow: 0 0 5px #2dd4bf, 0 0 15px #2dd4bf, 0 0 30px #2dd4bf;
+        }
+        .section-title {
+            font-weight: 900;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            background: -webkit-linear-gradient(45deg, #2dd4bf, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">LFA.</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#sobre" class="text-slate-300 hover:text-teal-400 transition-colors">Sobre</a>
+                <a href="#experiencia" class="text-slate-300 hover:text-teal-400 transition-colors">Experiência</a>
+                <a href="#habilidades" class="text-slate-300 hover:text-teal-400 transition-colors">Habilidades</a>
+                <a href="#conquistas" class="text-slate-300 hover:text-teal-400 transition-colors">Conquistas</a>
+                <a href="#contato" class="bg-teal-500 hover:bg-teal-400 text-black font-bold py-2 px-4 rounded-lg transition-transform hover:scale-105">Contato</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <i data-lucide="menu"></i>
+            </button>
+        </nav>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-gray-900/95 z-50 md:hidden">
+        <div class="flex justify-end p-6">
+             <button id="close-menu-button">
+                <i data-lucide="x" class="text-white h-8 w-8"></i>
+            </button>
+        </div>
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="#sobre" class="mobile-menu-link text-2xl text-slate-300 hover:text-teal-400">Sobre</a>
+            <a href="#experiencia" class="mobile-menu-link text-2xl text-slate-300 hover:text-teal-400">Experiência</a>
+            <a href="#habilidades" class="mobile-menu-link text-2xl text-slate-300 hover:text-teal-400">Habilidades</a>
+            <a href="#conquistas" class="mobile-menu-link text-2xl text-slate-300 hover:text-teal-400">Conquistas</a>
+            <a href="#contato" class="mobile-menu-link bg-teal-500 hover:bg-teal-400 text-black font-bold py-3 px-6 rounded-lg text-xl">Contato</a>
+        </div>
+    </div>
+
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-teal-500 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-blob"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+
+            <div class="container mx-auto px-6 text-center z-10">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-tighter mb-4">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">Lucas Fraga de Andrade</span>
+                </h1>
+                <p class="text-lg md:text-2xl text-teal-400 font-semibold mb-8">Conectando Inovação, Tecnologia e Resultados.</p>
+                <div class="flex justify-center space-x-4">
+                    <a href="https://w.app/mrbsak" class="bg-teal-500 text-black font-bold py-3 px-6 rounded-lg hover:bg-teal-400 transition-transform hover:scale-105">
+                        Vamos Conversar
+                    </a>
+                    <a href="#experiencia" class="border-2 border-slate-500 text-slate-300 font-bold py-3 px-6 rounded-lg hover:bg-slate-800 hover:border-slate-400 transition-all">
+                        Ver Projetos
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="sobre" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-center mb-12">Sobre Mim</h2>
+                <div class="grid md:grid-cols-5 gap-8 md:gap-12 items-center">
+                    <div class="md:col-span-2">
+                        <div class="w-full max-w-xs mx-auto md:max-w-none p-1 rounded-full glow-effect">
+                           <img src="Imgs/Design sem nome (1).png" 
+                                 onerror="this.onerror=null; this.src='https://placehold.co/400x400/cccccc/ffffff?text=Foto'"
+                                 alt="Foto de Lucas Fraga de Andrade" 
+                                 class="rounded-full w-full h-auto">
+                        </div>
+                    </div>
+                    <div class="md:col-span-3 text-lg text-slate-300 space-y-4 text-center md:text-left">
+                        <p>
+                            Olá! Sou estudante do 8º período de <strong class="text-teal-400">Ciência da Computação</strong>, apaixonado por resolver problemas e criar soluções que geram impacto real. Minha jornada profissional é focada em <strong class="text-teal-400">inovação</strong>, onde busco constantemente aprender e aplicar novas tecnologias para otimizar processos e desenvolver projetos eficazes.
+                        </p>
+                        <p>
+                            Sou comunicativo, proativo e tenho grande facilidade em aprender. Adoro trabalhar em equipe e acredito que a colaboração é a chave para superar desafios complexos. Minha experiência com startups e programas de incubação, como o <strong class="text-purple-400">SeedLab</strong> e a <strong class="text-purple-400">TecVitória</strong>, me deu uma visão prática da transformação digital e do desenvolvimento de soluções inovadoras.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experiencia" class="py-20 md:py-32 bg-gray-900/50">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-center mb-16">Experiência Profissional</h2>
+                <div class="relative max-w-3xl mx-auto">
+                    <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-slate-700"></div>
+                    
+                    <!-- Banestes -->
+                    <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="z-20 flex items-center order-1 bg-teal-500 shadow-xl w-8 h-8 rounded-full">
+                            <i data-lucide="briefcase" class="mx-auto text-black w-4 h-4"></i>
+                        </div>
+                        <div class="order-1 glass-effect rounded-lg shadow-xl w-5/12 px-6 py-4">
+                            <p class="text-sm text-slate-400">03/2024 - Presente</p>
+                            <h3 class="font-bold text-lg text-white">Estagiário de Inovação</h3>
+                            <p class="text-md font-semibold text-teal-400 mb-2">Banestes S.A</p>
+                            <p class="text-sm text-slate-300 leading-snug">Gestão de projetos ágeis, automação com AppScript, desenvolvimento Low-Code com App Sheet e criação de dashboards no Looker Studio.</p>
+                        </div>
+                    </div>
+
+                    <!-- MV Contabilidade -->
+                    <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="z-20 flex items-center order-1 bg-teal-500 shadow-xl w-8 h-8 rounded-full">
+                             <i data-lucide="bot" class="mx-auto text-black w-4 h-4"></i>
+                        </div>
+                        <div class="order-1 glass-effect rounded-lg shadow-xl w-5/12 px-6 py-4">
+                            <p class="text-sm text-slate-400">11/2023 - 02/2024</p>
+                            <h3 class="font-bold text-lg text-white">Estagiário de Automação</h3>
+                            <p class="text-md font-semibold text-teal-400 mb-2">Mv serviços de contabilidade</p>
+                            <p class="text-sm text-slate-300 leading-snug">Automação de processos com Python e Power Automate, e desenvolvimento de dashboards em Power BI.</p>
+                        </div>
+                    </div>
+
+                    <!-- Sincades Tech -->
+                    <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="z-20 flex items-center order-1 bg-teal-500 shadow-xl w-8 h-8 rounded-full">
+                             <i data-lucide="lightbulb" class="mx-auto text-black w-4 h-4"></i>
+                        </div>
+                        <div class="order-1 glass-effect rounded-lg shadow-xl w-5/12 px-6 py-4">
+                            <p class="text-sm text-slate-400">04/2023 - 08/2023</p>
+                            <h3 class="font-bold text-lg text-white">Bolsista de TI (Inovação)</h3>
+                            <p class="text-md font-semibold text-teal-400 mb-2">Sincades Tech</p>
+                            <p class="text-sm text-slate-300 leading-snug">Pesquisa de novas tecnologias, análise de dados, criação de sites em WordPress e pesquisa em Realidade Virtual.</p>
+                        </div>
+                    </div>
+                    
+                     <!-- FAESA -->
+                    <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="z-20 flex items-center order-1 bg-teal-500 shadow-xl w-8 h-8 rounded-full">
+                             <i data-lucide="school" class="mx-auto text-black w-4 h-4"></i>
+                        </div>
+                        <div class="order-1 glass-effect rounded-lg shadow-xl w-5/12 px-6 py-4">
+                            <p class="text-sm text-slate-400">06/2022 - 03/2023</p>
+                            <h3 class="font-bold text-lg text-white">Bolsista TI</h3>
+                            <p class="text-md font-semibold text-teal-400 mb-2">FAESA Centro Universitário</p>
+                            <p class="text-sm text-slate-300 leading-snug">Auxílio em análises e atualização de painéis BI, acompanhamento e edição de planilhas e elaboração de relatórios.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="habilidades" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-center mb-16">Caixa de Ferramentas</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Categoria 1: Automação & Low-Code -->
+                    <div class="glass-effect p-6 rounded-lg flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <i data-lucide="bot" class="w-8 h-8 text-teal-400 mr-4"></i>
+                            <h3 class="text-xl font-bold text-white">Automação & Low-Code</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-3 mt-auto">
+                            <span class="skill-tag">AppSheet <span class="text-teal-400">(Avançado)</span></span>
+                            <span class="skill-tag">Power Automate <span class="text-purple-400">(Intermediário)</span></span>
+                            <span class="skill-tag">AppScript <span class="text-slate-400">(Básico)</span></span>
+                        </div>
+                    </div>
+
+                    <!-- Categoria 2: Análise de Dados & BI -->
+                    <div class="glass-effect p-6 rounded-lg flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <i data-lucide="bar-chart-3" class="w-8 h-8 text-teal-400 mr-4"></i>
+                            <h3 class="text-xl font-bold text-white">Análise de Dados & BI</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-3 mt-auto">
+                            <span class="skill-tag">Excel <span class="text-teal-400">(Avançado)</span></span>
+                            <span class="skill-tag">Power BI <span class="text-purple-400">(Intermediário)</span></span>
+                            <span class="skill-tag">Looker Studio</span>
+                            <span class="skill-tag">Tratamento de Dados</span>
+                        </div>
+                    </div>
+
+                    <!-- Categoria 3: Gestão de Projetos & Inovação -->
+                    <div class="glass-effect p-6 rounded-lg flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <i data-lucide="lightbulb" class="w-8 h-8 text-teal-400 mr-4"></i>
+                            <h3 class="text-xl font-bold text-white">Gestão & Inovação</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-3 mt-auto">
+                            <span class="skill-tag">Metodologias Ágeis</span>
+                            <span class="skill-tag">Jira</span>
+                            <span class="skill-tag">Design Thinking</span>
+                            <span class="skill-tag">Lean Startup</span>
+                            <span class="skill-tag">Análise de Requisitos</span>
+                            <span class="skill-tag">Mapeamento de Fluxos</span>
+                        </div>
+                    </div>
+
+                    <!-- Categoria 4: Desenvolvimento -->
+                    <div class="glass-effect p-6 rounded-lg flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <i data-lucide="code-2" class="w-8 h-8 text-teal-400 mr-4"></i>
+                            <h3 class="text-xl font-bold text-white">Desenvolvimento</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-3 mt-auto">
+                             <span class="skill-tag">Python <span class="text-slate-400">(Básico)</span></span>
+                             <span class="skill-tag">Java <span class="text-slate-400">(Básico)</span></span>
+                             <span class="skill-tag">HTML & CSS <span class="text-slate-400">(Básico)</span></span>
+                        </div>
+                    </div>
+
+                    <!-- Categoria 5: E-commerce & CMS -->
+                    <div class="glass-effect p-6 rounded-lg flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <i data-lucide="shopping-cart" class="w-8 h-8 text-teal-400 mr-4"></i>
+                            <h3 class="text-xl font-bold text-white">E-commerce & CMS</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-3 mt-auto">
+                            <span class="skill-tag">WordPress <span class="text-purple-400">(Intermediário)</span></span>
+                            <span class="skill-tag">Shopify <span class="text-purple-400">(Intermediário)</span></span>
+                            <span class="skill-tag">Yampi <span class="text-purple-400">(Intermediário)</span></span>
+                            <span class="skill-tag">Bling <span class="text-purple-400">(Intermediário)</span></span>
+                        </div>
+                    </div>
+
+                    <!-- Categoria 6: Idiomas -->
+                    <div class="glass-effect p-6 rounded-lg flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <i data-lucide="languages" class="w-8 h-8 text-teal-400 mr-4"></i>
+                            <h3 class="text-xl font-bold text-white">Idiomas</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-3 mt-auto">
+                            <span class="skill-tag">Português (Nativo)</span>
+                            <span class="skill-tag">Inglês <span class="text-slate-400">(Básico)</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Achievements and Volunteering Section -->
+        <section id="conquistas" class="py-20 md:py-32 bg-gray-900/50">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-center mb-16">Conquistas e Voluntariado</h2>
+                
+                <!-- Prêmios -->
+                <div class="mb-16">
+                    <h3 class="text-2xl md:text-3xl font-bold text-center text-white mb-8">Prêmios e Reconhecimentos</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        <div class="glass-effect p-6 rounded-lg text-center">
+                            <i data-lucide="trophy" class="w-12 h-12 text-teal-400 mx-auto mb-4"></i>
+                            <h4 class="text-xl font-bold text-white">1° Lugar - Desafios Fortes</h4>
+                            <p class="text-teal-300">Hack27 Universitário - Base27</p>
+                        </div>
+                        <div class="glass-effect p-6 rounded-lg text-center">
+                            <i data-lucide="award" class="w-12 h-12 text-purple-400 mx-auto mb-4"></i>
+                            <h4 class="text-xl font-bold text-white">Ideia Mais Inovadora</h4>
+                            <p class="text-purple-300">Hack27 Universitário - Base27</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Voluntariado -->
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-bold text-center text-white mb-8">Experiência Voluntária</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="glass-effect p-6 rounded-lg">
+                            <p class="font-bold text-slate-400 mb-2">2025</p>
+                            <h4 class="text-lg font-bold text-white mb-2">Ponto Focal - Patrocínios</h4>
+                            <p class="text-teal-400 font-semibold mb-3">Agile Day</p>
+                            <p class="text-sm text-slate-300">Responsável pela prospecção de patrocínios e liderança da equipe de contatos.</p>
+                        </div>
+                         <div class="glass-effect p-6 rounded-lg">
+                            <p class="font-bold text-slate-400 mb-2">2025</p>
+                            <h4 class="text-lg font-bold text-white mb-2">Diretoria Comercial</h4>
+                            <p class="text-teal-400 font-semibold mb-3">Hack FAESA</p>
+                            <p class="text-sm text-slate-300">Liderança na prospecção de patrocínios e guia da equipe para novos contatos.</p>
+                        </div>
+                        <div class="glass-effect p-6 rounded-lg">
+                            <p class="font-bold text-slate-400 mb-2">2024</p>
+                            <h4 class="text-lg font-bold text-white mb-2">Operações</h4>
+                            <p class="text-teal-400 font-semibold mb-3">Agile Day</p>
+                            <p class="text-sm text-slate-300">Contato com fornecedores para a organização e execução do evento.</p>
+                        </div>
+                        <div class="glass-effect p-6 rounded-lg">
+                            <p class="font-bold text-slate-400 mb-2">2024</p>
+                            <h4 class="text-lg font-bold text-white mb-2">Diretoria Comercial</h4>
+                            <p class="text-teal-400 font-semibold mb-3">Hack FAESA</p>
+                            <p class="text-sm text-slate-300">Responsável pela prospecção de patrocínios para o evento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contato" class="py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title mb-4">Vamos Inovar Juntos?</h2>
+                <p class="max-w-2xl mx-auto text-lg text-slate-300 mb-8">Estou sempre aberto a novas oportunidades, projetos e colaborações. Se você tem uma ideia ou um desafio, vamos conversar!</p>
+                
+                <a href="https://w.app/mrbsak" class="inline-block bg-teal-500 text-black text-xl font-bold py-4 px-8 rounded-lg hover:bg-teal-400 transition-transform hover:scale-105 mb-12">
+                    Fale comigo
+                </a>
+
+                <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-2">
+                    <div class="flex items-center space-x-2 text-slate-300">
+                        <i data-lucide="mail" class="w-5 h-5 text-teal-400"></i>
+                        <span>lucasf.andrade1@outlook.com</span>
+                    </div>
+                     <div class="flex items-center space-x-2 text-slate-300">
+                        <i data-lucide="phone" class="w-5 h-5 text-teal-400"></i>
+                        <span>(27) 99254-8928</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-slate-800">
+        <div class="container mx-auto px-6 text-center text-slate-400">
+            <p>&copy; <span id="year"></span> Lucas Fraga de Andrade. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+
+    <style>
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .bg-grid-pattern {
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 2rem 2rem;
+        }
+        .skill-tag {
+            @apply bg-gray-800/50 border border-gray-700 text-slate-200 text-sm font-medium px-3 py-1.5 rounded-lg;
+        }
+    </style>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('glass-effect', 'shadow-lg');
+            } else {
+                header.classList.remove('glass-effect', 'shadow-lg');
+            }
+        });
+        
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMenuButton = document.getElementById('close-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+        
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+    </script>
+</body>
+</html>
